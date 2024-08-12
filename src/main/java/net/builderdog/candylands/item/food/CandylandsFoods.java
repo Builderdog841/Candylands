@@ -1,4 +1,4 @@
-package net.builderdog.candylands.item;
+package net.builderdog.candylands.item.food;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

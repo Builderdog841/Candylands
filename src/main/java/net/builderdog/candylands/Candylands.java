@@ -1,16 +1,21 @@
 package net.builderdog.candylands;
 
 import com.mojang.logging.LogUtils;
+import net.builderdog.candylands.item.CandylandsItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.registries.DataPackRegistryEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
 @Mod(Candylands.MODID)
@@ -18,14 +23,16 @@ public class Candylands {
     public static final String MODID = "candylands";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public Candylands(IEventBus modEventBus) {
-        modEventBus.addListener(this::commonSetup);
+    public Candylands(ModContainer mod, IEventBus bus, Dist dist) {
+        bus.addListener(this::commonSetup);
 
-        // BLOCKS.register(modEventBus);
-        // ITEMS.register(modEventBus);
-        // CREATIVE_MODE_TABS.register(modEventBus);
+        DeferredRegister<?>[] registers = {
+                CandylandsItems.ITEMS
+        };
 
-        NeoForge.EVENT_BUS.register(this);
+        for (DeferredRegister<?> register : registers) {
+            register.register(bus);
+        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
