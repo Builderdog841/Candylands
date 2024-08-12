@@ -1,6 +1,7 @@
 package net.builderdog.candylands;
 
 import com.mojang.logging.LogUtils;
+import net.builderdog.candylands.data.CandylandsData;
 import net.builderdog.candylands.item.CandylandsItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -9,12 +10,9 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DataPackRegistryEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
@@ -24,6 +22,7 @@ public class Candylands {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Candylands(ModContainer mod, IEventBus bus, Dist dist) {
+        bus.addListener(CandylandsData::dataSetup);
         bus.addListener(this::commonSetup);
 
         DeferredRegister<?>[] registers = {
