@@ -31,6 +31,7 @@ public class CandylandsItemModelData extends CandylandsItemModelProvider {
         this.item(CandylandsItems.ORANGE_LOLLIPOP.get());
         this.item(CandylandsItems.LEMON_LOLLIPOP.get());
         this.item(CandylandsItems.CAKEPOP.get());
+        this.item(CandylandsItems.ICE_CREAM.get());
         this.item(CandylandsItems.COTTON_CANDY.get());
         this.item(CandylandsItems.MINT_CANDY.get());
         this.item(CandylandsItems.WARPED_POP.get());

@@ -2,6 +2,7 @@ package net.builderdog.candylands;
 
 import com.mojang.logging.LogUtils;
 import net.builderdog.candylands.data.CandylandsData;
+import net.builderdog.candylands.item.CandylandsCreativeTabs;
 import net.builderdog.candylands.item.CandylandsItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -26,7 +27,8 @@ public class Candylands {
         bus.addListener(this::commonSetup);
 
         DeferredRegister<?>[] registers = {
-                CandylandsItems.ITEMS
+                CandylandsItems.ITEMS,
+                CandylandsCreativeTabs.CREATIVE_MODE_TABS
         };
 
         for (DeferredRegister<?> register : registers) {

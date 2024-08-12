@@ -18,5 +18,15 @@
   "item.candylands.strawberry_lollipop": "Strawberry Lollipop",
   "item.candylands.sugar_stick": "Sugar Stick",
   "item.candylands.warped_pop": "Warped Pop",
-  "item.candylands.white_marshmallow": "White Marshmallow"
+  "item.candylands.white_marshmallow": "White Marshmallow",
+  "itemGroup.candylands.building_blocks": "Candylands Building Blocks",
+  "itemGroup.candylands.candy_and_treats": "Candylands Candy & Treats",
+  "itemGroup.candylands.combat": "Candylands Combat",
+  "itemGroup.candylands.dungeon_blocks": "Candylands Dungeon Blocks",
+  "itemGroup.candylands.event_content": "Candylands Event Content",
+  "itemGroup.candylands.functional_blocks": "Candylands Functional Blocks",
+  "itemGroup.candylands.ingredients": "Candylands Ingredients",
+  "itemGroup.candylands.natural_blocks": "Candylands Natural Blocks",
+  "itemGroup.candylands.spawn_eggs": "Candylands Spawn Eggs",
+  "itemGroup.candylands.tools_and_utilities": "Candylands Tools & Utilities"
 }

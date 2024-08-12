@@ -1,4 +1,4 @@
-// 1.21	2024-08-12T20:41:42.9048823	Item Models: candylands
+// 1.21	2024-08-12T21:07:15.5270308	Item Models: candylands
 ab0ebe93872ae97d93fb5e43f4efa4c51aa30833 assets/candylands/models/item/blueberry_lollipop.json
 60716404330147d0bd949b5e589f91ae7fe0d491 assets/candylands/models/item/cakepop.json
 0c79d37db8159b6b5b4946604d475777361d9b40 assets/candylands/models/item/candy_cane.json
@@ -7,6 +7,7 @@ ab0ebe93872ae97d93fb5e43f4efa4c51aa30833 assets/candylands/models/item/blueberry
 6ed04b73605a4ad114f4a0e530f5d0a48f2e2952 assets/candylands/models/item/crystallized_sugar.json
 e9760516b32ba3f91707fed85f7e7cc424357cb4 assets/candylands/models/item/dextrose.json
 3607a63bac14191a5c03ffffc03c9feb540d7b84 assets/candylands/models/item/green_candy_cane.json
+ab527eeaf1ff4dcee1da91ee9eb2398a926ed814 assets/candylands/models/item/ice_cream.json
 20ab3d38ea17a93c62f22133003e3da6ca0a8b0b assets/candylands/models/item/lemon_lollipop.json
 9d12efe8a4ebde4deb96515d8bea7ca28a0cec7b assets/candylands/models/item/licorice.json
 a31795f092685f5cd583d76b0f8f76ff826516ca assets/candylands/models/item/lime_lollipop.json
