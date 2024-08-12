@@ -3,6 +3,7 @@ package net.builderdog.candylands.item;
 import net.builderdog.candylands.Candylands;
 import net.builderdog.candylands.item.food.CandylandsFoods;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -29,5 +30,5 @@ public class CandylandsItems {
     public static final DeferredItem<Item> ICE_CREAM = ITEMS.register("ice_cream", () -> new Item(new Item.Properties().food(CandylandsFoods.ICE_CREAM)));
     public static final DeferredItem<Item> COTTON_CANDY = ITEMS.register("cotton_candy", () -> new Item(new Item.Properties().food(CandylandsFoods.COTTON_CANDY)));
     public static final DeferredItem<Item> MINT_CANDY = ITEMS.register("mint_candy", () -> new Item(new Item.Properties().food(CandylandsFoods.MINT_CANDY)));
-    public static final DeferredItem<Item> WARPED_POP = ITEMS.register("warped_pop", () -> new Item(new Item.Properties().food(CandylandsFoods.WARPED_POP)));
+    public static final DeferredItem<Item> WARPED_POP = ITEMS.register("warped_pop", () -> new Item(new Item.Properties().food(CandylandsFoods.WARPED_POP).rarity(Rarity.UNCOMMON)));
 }
