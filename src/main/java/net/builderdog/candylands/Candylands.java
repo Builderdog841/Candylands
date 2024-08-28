@@ -1,6 +1,7 @@
 package net.builderdog.candylands;
 
 import com.mojang.logging.LogUtils;
+import net.builderdog.candylands.block.CandylandsBlocks;
 import net.builderdog.candylands.data.CandylandsData;
 import net.builderdog.candylands.item.CandylandsCreativeTabs;
 import net.builderdog.candylands.item.CandylandsItems;
@@ -27,6 +28,7 @@ public class Candylands {
         bus.addListener(this::commonSetup);
 
         DeferredRegister<?>[] registers = {
+                CandylandsBlocks.BLOCKS,
                 CandylandsItems.ITEMS,
                 CandylandsCreativeTabs.CREATIVE_MODE_TABS
         };
