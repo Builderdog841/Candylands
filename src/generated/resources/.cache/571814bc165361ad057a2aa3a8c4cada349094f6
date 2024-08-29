@@ -1,12 +1,17 @@
-// 1.21	2024-08-12T21:07:15.5270308	Item Models: candylands
+// 1.21	2024-08-29T12:38:38.9674556	Item Models: candylands
 ab0ebe93872ae97d93fb5e43f4efa4c51aa30833 assets/candylands/models/item/blueberry_lollipop.json
 60716404330147d0bd949b5e589f91ae7fe0d491 assets/candylands/models/item/cakepop.json
 0c79d37db8159b6b5b4946604d475777361d9b40 assets/candylands/models/item/candy_cane.json
+4708c34058c642363e053cf85095823776833fbd assets/candylands/models/item/candy_cane_block.json
 446145f6a4b559f7bbb702f037b3d01341a5cad4 assets/candylands/models/item/caramel.json
 16faf2f547f29bc9c05bee7744c55fd2da1ba521 assets/candylands/models/item/cotton_candy.json
+d9a53272780bdda6a7140f06e84a12b2def4601f assets/candylands/models/item/covered_candy_cane_block.json
+90994502e0b56791ff4e32dee879755b94811b7a assets/candylands/models/item/covered_green_candy_cane_block.json
+bb94af845ab5e5630ddeebb4f6b3351546153d30 assets/candylands/models/item/covered_peppermint_candy_cane_block.json
 6ed04b73605a4ad114f4a0e530f5d0a48f2e2952 assets/candylands/models/item/crystallized_sugar.json
 e9760516b32ba3f91707fed85f7e7cc424357cb4 assets/candylands/models/item/dextrose.json
 3607a63bac14191a5c03ffffc03c9feb540d7b84 assets/candylands/models/item/green_candy_cane.json
+eb59379f16619ffa03d3e7b33651d5997669015c assets/candylands/models/item/green_candy_cane_block.json
 ab527eeaf1ff4dcee1da91ee9eb2398a926ed814 assets/candylands/models/item/ice_cream.json
 20ab3d38ea17a93c62f22133003e3da6ca0a8b0b assets/candylands/models/item/lemon_lollipop.json
 9d12efe8a4ebde4deb96515d8bea7ca28a0cec7b assets/candylands/models/item/licorice.json
@@ -14,6 +19,7 @@ a31795f092685f5cd583d76b0f8f76ff826516ca assets/candylands/models/item/lime_loll
 40ecc89dad0d03c6d6cd4312445ebc4dea805227 assets/candylands/models/item/mint_candy.json
 3f47d8f044e4e2638a6cf19017b22d0549d9b267 assets/candylands/models/item/orange_lollipop.json
 ce55d681218d7ec0bd5d535f0e1c52e367a8e3fe assets/candylands/models/item/peppermint_candy_cane.json
+47c1384642bdd37403054f12bdfd2223f489baa6 assets/candylands/models/item/peppermint_candy_cane_block.json
 c389c3590b20562e42ead224950e60ca2c2a1a7a assets/candylands/models/item/pink_marshmallow.json
 d8c62ecdfdeac5582a34b1149f1a2bd8d830cf82 assets/candylands/models/item/strawberry_lollipop.json
 1911e2cb95426b2ad5d36f77dd4accd2575a3f3e assets/candylands/models/item/sugar_stick.json

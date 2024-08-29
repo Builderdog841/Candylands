@@ -1,6 +1,7 @@
 package net.builderdog.candylands.data.generators;
 
 import net.builderdog.candylands.Candylands;
+import net.builderdog.candylands.block.CandylandsBlocks;
 import net.builderdog.candylands.data.providers.CandylandsItemModelProvider;
 import net.builderdog.candylands.item.CandylandsItems;
 import net.minecraft.data.PackOutput;
@@ -13,7 +14,6 @@ public class CandylandsItemModelData extends CandylandsItemModelProvider {
 
     @Override
     protected void registerModels() {
-
         this.item(CandylandsItems.CRYSTALLIZED_SUGAR.get());
         this.handheldItem(CandylandsItems.SUGAR_STICK.get());
 
@@ -35,5 +35,13 @@ public class CandylandsItemModelData extends CandylandsItemModelProvider {
         this.item(CandylandsItems.COTTON_CANDY.get());
         this.item(CandylandsItems.MINT_CANDY.get());
         this.item(CandylandsItems.WARPED_POP.get());
+
+        this.itemBlock(CandylandsBlocks.CANDY_CANE_BLOCK.get());
+        this.itemBlock(CandylandsBlocks.GREEN_CANDY_CANE_BLOCK.get());
+        this.itemBlock(CandylandsBlocks.PEPPERMINT_CANDY_CANE_BLOCK.get());
+
+        this.itemBlock(CandylandsBlocks.COVERED_CANDY_CANE_BLOCK.get());
+        this.itemBlock(CandylandsBlocks.COVERED_GREEN_CANDY_CANE_BLOCK.get());
+        this.itemBlock(CandylandsBlocks.COVERED_PEPPERMINT_CANDY_CANE_BLOCK.get());
     }
 }

@@ -1,11 +1,11 @@
 package net.builderdog.candylands.data.generators;
 
 import net.builderdog.candylands.Candylands;
+import net.builderdog.candylands.block.CandylandsBlocks;
 import net.builderdog.candylands.data.providers.CandylandsLanguageProvider;
 import net.builderdog.candylands.item.CandylandsCreativeTabs;
 import net.builderdog.candylands.item.CandylandsItems;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class CandylandsLanguageData extends CandylandsLanguageProvider {
     public CandylandsLanguageData(PackOutput output) {
@@ -14,6 +14,22 @@ public class CandylandsLanguageData extends CandylandsLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.addBlock(CandylandsBlocks.GLAZE, "Glaze");
+        this.addBlock(CandylandsBlocks.FROZEN_YOGHURT, "Frozen Yoghurt");
+        this.addBlock(CandylandsBlocks.STRAWBERRY_CREAM, "Strawberry Cream");
+        this.addBlock(CandylandsBlocks.VANILLA_CREAM, "Vanilla Cream");
+        this.addBlock(CandylandsBlocks.CHOCOLATE_CREAM, "Chocolate Cream");
+
+        this.addBlock(CandylandsBlocks.JELLY, "Jelly");
+        this.addBlock(CandylandsBlocks.DARK_JELLY, "Dark Jelly");
+
+        this.addBlock(CandylandsBlocks.CANDY_CANE_BLOCK, "Candy Cane Block");
+        this.addBlock(CandylandsBlocks.GREEN_CANDY_CANE_BLOCK, "Green Candy Cane Block");
+        this.addBlock(CandylandsBlocks.PEPPERMINT_CANDY_CANE_BLOCK, "Peppermint Candy Cane Block");
+
+        this.addBlock(CandylandsBlocks.COVERED_CANDY_CANE_BLOCK, "Covered Candy Cane Block");
+        this.addBlock(CandylandsBlocks.COVERED_GREEN_CANDY_CANE_BLOCK, "Covered Green Candy Cane Block");
+        this.addBlock(CandylandsBlocks.COVERED_PEPPERMINT_CANDY_CANE_BLOCK, "Covered Peppermint Candy Cane Block");
 
         this.addItem(CandylandsItems.CRYSTALLIZED_SUGAR, "Crystallized Sugar");
         this.addItem(CandylandsItems.SUGAR_STICK, "Sugar Stick");
@@ -37,15 +53,10 @@ public class CandylandsLanguageData extends CandylandsLanguageProvider {
         this.addItem(CandylandsItems.MINT_CANDY, "Mint Candy");
         this.addItem(CandylandsItems.WARPED_POP, "Warped Pop");
 
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_BUILDING_BLOCKS.get(), "Candylands Building Blocks");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_DUNGEON_BLOCKS.get(), "Candylands Dungeon Blocks");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_NATURAL_BLOCKS.get(), "Candylands Natural Blocks");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_FUNCTIONAL_BLOCKS.get(), "Candylands Functional Blocks");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_TOOLS_AND_UTILITIES.get(), "Candylands Tools & Utilities");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_COMBAT.get(), "Candylands Combat");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_CANDY_AND_TREATS.get(), "Candylands Candy & Treats");
+        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_BLOCKS.get(), "Candylands Blocks");
+        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_COMBAT_AND_UTILITIES.get(), "Candylands Combat and Utilities");
+        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_CANDY_AND_TREATS.get(), "Candylands Candy and Treats");
         this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_INGREDIENTS.get(), "Candylands Ingredients");
-        this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_EVENT_CONTENT.get(), "Candylands Event Content");
         this.addCreativeTab(CandylandsCreativeTabs.CANDYLANDS_SPAWN_EGGS.get(), "Candylands Spawn Eggs");
     }
 }

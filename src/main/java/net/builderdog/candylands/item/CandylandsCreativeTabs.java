@@ -1,6 +1,7 @@
 package net.builderdog.candylands.item;
 
 import net.builderdog.candylands.Candylands;
+import net.builderdog.candylands.block.CandylandsBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -14,63 +15,39 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class CandylandsCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Candylands.MODID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_BUILDING_BLOCKS = CREATIVE_MODE_TABS.register("candylands", () -> CreativeModeTab.builder()
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_BLOCKS = CREATIVE_MODE_TABS.register("blocks", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "dungeon_blocks"))
-            .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".building_blocks"))
+            .withTabsAfter(CandylandsCreativeTabs.CANDYLANDS_COMBAT_AND_UTILITIES.getId())
+            .icon(() -> new ItemStack(CandylandsBlocks.JELLY))
+            .title(Component.translatable("itemGroup." + Candylands.MODID + ".blocks"))
             .displayItems((features, output) -> {
-
+                output.accept(CandylandsBlocks.GLAZE);
+                output.accept(CandylandsBlocks.FROZEN_YOGHURT);
+                output.accept(CandylandsBlocks.STRAWBERRY_CREAM);
+                output.accept(CandylandsBlocks.VANILLA_CREAM);
+                output.accept(CandylandsBlocks.CHOCOLATE_CREAM);
+                output.accept(CandylandsBlocks.JELLY);
+                output.accept(CandylandsBlocks.DARK_JELLY);
+                output.accept(CandylandsBlocks.CANDY_CANE_BLOCK);
+                output.accept(CandylandsBlocks.COVERED_CANDY_CANE_BLOCK);
+                output.accept(CandylandsBlocks.GREEN_CANDY_CANE_BLOCK);
+                output.accept(CandylandsBlocks.COVERED_GREEN_CANDY_CANE_BLOCK);
+                output.accept(CandylandsBlocks.PEPPERMINT_CANDY_CANE_BLOCK);
+                output.accept(CandylandsBlocks.COVERED_PEPPERMINT_CANDY_CANE_BLOCK);
             }).build());
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_DUNGEON_BLOCKS = CREATIVE_MODE_TABS.register("dungeon_blocks", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "building_blocks"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "natural_blocks"))
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_COMBAT_AND_UTILITIES = CREATIVE_MODE_TABS.register("combat_and_utilities", () -> CreativeModeTab.builder()
+            .withTabsBefore(CandylandsCreativeTabs.CANDYLANDS_BLOCKS.getId())
+            .withTabsAfter(CandylandsCreativeTabs.CANDYLANDS_CANDY_AND_TREATS.getId())
             .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".dungeon_blocks"))
-            .displayItems((features, output) -> {
-
-            }).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_NATURAL_BLOCKS = CREATIVE_MODE_TABS.register("natural_blocks", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "dungeon_blocks"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "functional_blocks"))
-            .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".natural_blocks"))
-            .displayItems((features, output) -> {
-
-            }).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_FUNCTIONAL_BLOCKS = CREATIVE_MODE_TABS.register("functional_blocks", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "natural_blocks"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "tools_and_utilities"))
-            .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".functional_blocks"))
-            .displayItems((features, output) -> {
-
-            }).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_TOOLS_AND_UTILITIES = CREATIVE_MODE_TABS.register("tools_and_utilities", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "functional_blocks"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "combat"))
-            .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".tools_and_utilities"))
-            .displayItems((features, output) -> {
-
-            }).build());
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_COMBAT = CREATIVE_MODE_TABS.register("combat", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "tools_and_utilities"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "candy_and_treats"))
-            .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".combat"))
+            .title(Component.translatable("itemGroup." + Candylands.MODID + ".combat_and_utilities"))
             .displayItems((features, output) -> {
 
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_CANDY_AND_TREATS = CREATIVE_MODE_TABS.register("candy_and_treats", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "combat"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "ingredients"))
+            .withTabsBefore(CandylandsCreativeTabs.CANDYLANDS_COMBAT_AND_UTILITIES.getId())
+            .withTabsAfter(CandylandsCreativeTabs.CANDYLANDS_INGREDIENTS.getId())
             .icon(() -> new ItemStack(CandylandsItems.CANDY_CANE.get()))
             .title(Component.translatable("itemGroup." + Candylands.MODID + ".candy_and_treats"))
             .displayItems((features, output) -> {
@@ -95,28 +72,20 @@ public class CandylandsCreativeTabs {
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_INGREDIENTS = CREATIVE_MODE_TABS.register("ingredients", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "candy_and_treats"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "event_content"))
+            .withTabsBefore(CandylandsCreativeTabs.CANDYLANDS_CANDY_AND_TREATS.getId())
+            .withTabsAfter(CandylandsCreativeTabs.CANDYLANDS_SPAWN_EGGS.getId())
             .icon(() -> new ItemStack(CandylandsItems.CRYSTALLIZED_SUGAR.get()))
             .title(Component.translatable("itemGroup." + Candylands.MODID + ".ingredients"))
             .displayItems((features, output) -> {
                 output.accept(CandylandsItems.CRYSTALLIZED_SUGAR.get());
+                output.accept(CandylandsItems.CARAMEL.get());
                 output.accept(CandylandsItems.SUGAR_STICK.get());
                 output.accept(CandylandsItems.LICORICE.get());
                 output.accept(CandylandsItems.DEXTROSE.get());
             }).build());
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_EVENT_CONTENT = CREATIVE_MODE_TABS.register("event_content", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "ingredients"))
-            .withTabsAfter(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "spawn_eggs"))
-            .icon(() -> new ItemStack(Blocks.STONE))
-            .title(Component.translatable("itemGroup." + Candylands.MODID + ".event_content"))
-            .displayItems((features, output) -> {
-
-            }).build());
-
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CANDYLANDS_SPAWN_EGGS = CREATIVE_MODE_TABS.register("spawn_eggs", () -> CreativeModeTab.builder()
-            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Candylands.MODID, "event_content"))
+            .withTabsBefore(CandylandsCreativeTabs.CANDYLANDS_INGREDIENTS.getId())
             .icon(() -> new ItemStack(Blocks.STONE))
             .title(Component.translatable("itemGroup." + Candylands.MODID + ".spawn_eggs"))
             .displayItems((features, output) -> {

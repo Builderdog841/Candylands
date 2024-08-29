@@ -1,5 +1,6 @@
 package net.builderdog.candylands.data;
 
+import net.builderdog.candylands.data.generators.CandylandsBlockStateData;
 import net.builderdog.candylands.data.generators.CandylandsItemModelData;
 import net.builderdog.candylands.data.generators.CandylandsLanguageData;
 import net.minecraft.core.HolderLookup;
@@ -18,6 +19,7 @@ public class CandylandsData {
         PackOutput packOutput = generator.getPackOutput();
 
         // Client Data
+        generator.addProvider(event.includeClient(), new CandylandsBlockStateData(packOutput, fileHelper));
         generator.addProvider(event.includeClient(), new CandylandsItemModelData(packOutput, fileHelper));
         generator.addProvider(event.includeClient(), new CandylandsLanguageData(packOutput));
     }
